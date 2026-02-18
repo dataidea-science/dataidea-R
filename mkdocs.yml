@@ -1,9 +1,12 @@
 site_name: R Science Documentation
 
 # GitHub Pages configuration
-site_url: https://dataidea-science.github.io/dataidea-R/
+site_url: https://r.dataidea.org/
 repo_url: https://github.com/dataidea-science/dataidea-R
 repo_name: dataidea-science/dataidea-R
+
+# Use directory URLs (default, but explicit for clarity)
+use_directory_urls: true
 
 # Theme configuration
 theme:
