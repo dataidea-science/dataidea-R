@@ -1,71 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://dataidea-science.github.io/dataidea-R/</loc>
+         <loc>https://r.dataidea.org/</loc>
          <lastmod>2026-02-18</lastmod>
     </url>
     <url>
-         <loc>https://dataidea-science.github.io/dataidea-R/data-analysis-r/</loc>
+         <loc>https://r.dataidea.org/data-analysis-r/</loc>
          <lastmod>2026-02-18</lastmod>
     </url>
     <url>
-         <loc>https://dataidea-science.github.io/dataidea-R/data-analysis-r/data-cleaning/</loc>
+         <loc>https://r.dataidea.org/data-analysis-r/data-cleaning/</loc>
          <lastmod>2026-02-18</lastmod>
     </url>
     <url>
-         <loc>https://dataidea-science.github.io/dataidea-R/data-analysis-r/data-import-export/</loc>
+         <loc>https://r.dataidea.org/data-analysis-r/data-import-export/</loc>
          <lastmod>2026-02-18</lastmod>
     </url>
     <url>
-         <loc>https://dataidea-science.github.io/dataidea-R/data-analysis-r/exploratory-analysis/</loc>
+         <loc>https://r.dataidea.org/data-analysis-r/exploratory-analysis/</loc>
          <lastmod>2026-02-18</lastmod>
     </url>
     <url>
-         <loc>https://dataidea-science.github.io/dataidea-R/data-analysis-r/introduction/</loc>
+         <loc>https://r.dataidea.org/data-analysis-r/introduction/</loc>
          <lastmod>2026-02-18</lastmod>
     </url>
     <url>
-         <loc>https://dataidea-science.github.io/dataidea-R/data-analysis-r/real-datasets/</loc>
+         <loc>https://r.dataidea.org/data-analysis-r/real-datasets/</loc>
          <lastmod>2026-02-18</lastmod>
     </url>
     <url>
-         <loc>https://dataidea-science.github.io/dataidea-R/data-analysis-r/statistical-analysis/</loc>
+         <loc>https://r.dataidea.org/data-analysis-r/statistical-analysis/</loc>
          <lastmod>2026-02-18</lastmod>
     </url>
     <url>
-         <loc>https://dataidea-science.github.io/dataidea-R/data-analysis-r/visualization/</loc>
+         <loc>https://r.dataidea.org/data-analysis-r/visualization/</loc>
          <lastmod>2026-02-18</lastmod>
     </url>
     <url>
-         <loc>https://dataidea-science.github.io/dataidea-R/r-fundamentals/</loc>
+         <loc>https://r.dataidea.org/r-fundamentals/</loc>
          <lastmod>2026-02-18</lastmod>
     </url>
     <url>
-         <loc>https://dataidea-science.github.io/dataidea-R/r-fundamentals/control-flow/</loc>
+         <loc>https://r.dataidea.org/r-fundamentals/control-flow/</loc>
          <lastmod>2026-02-18</lastmod>
     </url>
     <url>
-         <loc>https://dataidea-science.github.io/dataidea-R/r-fundamentals/data-structures/</loc>
+         <loc>https://r.dataidea.org/r-fundamentals/data-structures/</loc>
          <lastmod>2026-02-18</lastmod>
     </url>
     <url>
-         <loc>https://dataidea-science.github.io/dataidea-R/r-fundamentals/functions/</loc>
+         <loc>https://r.dataidea.org/r-fundamentals/functions/</loc>
          <lastmod>2026-02-18</lastmod>
     </url>
     <url>
-         <loc>https://dataidea-science.github.io/dataidea-R/r-fundamentals/getting-started/</loc>
+         <loc>https://r.dataidea.org/r-fundamentals/getting-started/</loc>
          <lastmod>2026-02-18</lastmod>
     </url>
     <url>
-         <loc>https://dataidea-science.github.io/dataidea-R/r-fundamentals/packages/</loc>
+         <loc>https://r.dataidea.org/r-fundamentals/packages/</loc>
          <lastmod>2026-02-18</lastmod>
     </url>
     <url>
-         <loc>https://dataidea-science.github.io/dataidea-R/r-fundamentals/variables-data-types/</loc>
+         <loc>https://r.dataidea.org/r-fundamentals/variables-data-types/</loc>
          <lastmod>2026-02-18</lastmod>
     </url>
     <url>
-         <loc>https://dataidea-science.github.io/dataidea-R/r-fundamentals/vectors-operations/</loc>
+         <loc>https://r.dataidea.org/r-fundamentals/vectors-operations/</loc>
          <lastmod>2026-02-18</lastmod>
     </url>
 </urlset>
