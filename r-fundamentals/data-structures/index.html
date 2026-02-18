@@ -8,29 +8,31 @@
       
       
       
-        <link rel="canonical" href="https://dataidea-science.github.io/dataidea-R/">
+        <link rel="canonical" href="https://dataidea-science.github.io/dataidea-R/r-fundamentals/data-structures/">
       
       
+        <link rel="prev" href="../vectors-operations/">
       
-        <link rel="next" href="r-fundamentals/">
+      
+        <link rel="next" href="../control-flow/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>R Science Documentation</title>
+        <title>Data Structures - R Science Documentation</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -49,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-r-science-documentation" class="md-skip">
+        <a href="#data-structures" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +90,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="R Science Documentation" class="md-header__button md-logo" aria-label="R Science Documentation" data-md-component="logo">
+    <a href="../.." title="R Science Documentation" class="md-header__button md-logo" aria-label="R Science Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -108,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Data Structures
             
           </span>
         </div>
@@ -219,11 +221,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -240,11 +240,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="r-fundamentals/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -264,7 +266,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="data-analysis-r/" class="md-tabs__link">
+        <a href="../../data-analysis-r/" class="md-tabs__link">
           
   
   
@@ -298,7 +300,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="R Science Documentation" class="md-nav__button md-logo" aria-label="R Science Documentation" data-md-component="logo">
+    <a href="../.." title="R Science Documentation" class="md-nav__button md-logo" aria-label="R Science Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -325,37 +327,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Home
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -371,98 +346,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Getting Started
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Getting Started">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#r-programming-fundamentals" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📚 R Programming Fundamentals
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-analysis-with-r" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📊 Data Analysis with R
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-use-this-documentation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How to Use This Documentation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Prerequisites
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quick-links" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quick Links
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -471,28 +354,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -510,7 +396,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -528,7 +414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="r-fundamentals/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -556,7 +442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="r-fundamentals/getting-started/" class="md-nav__link">
+      <a href="../getting-started/" class="md-nav__link">
         
   
   
@@ -584,7 +470,7 @@
   
   
     <li class="md-nav__item">
-      <a href="r-fundamentals/variables-data-types/" class="md-nav__link">
+      <a href="../variables-data-types/" class="md-nav__link">
         
   
   
@@ -612,7 +498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="r-fundamentals/vectors-operations/" class="md-nav__link">
+      <a href="../vectors-operations/" class="md-nav__link">
         
   
   
@@ -637,10 +523,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="r-fundamentals/data-structures/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Structures
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -656,6 +569,231 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#matrices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Matrices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Matrices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-matrices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating Matrices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessing-matrix-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessing Matrix Elements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matrix-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Matrix Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arrays
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lists
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lists">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating Lists
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessing-list-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessing List Elements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifying-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modifying Lists
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-frames" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Frames
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Frames">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-data-frames" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating Data Frames
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessing-data-frame-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessing Data Frame Elements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-frame-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Frame Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifying-data-frames" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modifying Data Frames
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#factors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Factors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checking-data-structures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checking Data Structures
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -668,7 +806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="r-fundamentals/control-flow/" class="md-nav__link">
+      <a href="../control-flow/" class="md-nav__link">
         
   
   
@@ -696,7 +834,7 @@
   
   
     <li class="md-nav__item">
-      <a href="r-fundamentals/functions/" class="md-nav__link">
+      <a href="../functions/" class="md-nav__link">
         
   
   
@@ -724,7 +862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="r-fundamentals/packages/" class="md-nav__link">
+      <a href="../packages/" class="md-nav__link">
         
   
   
@@ -813,7 +951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-analysis-r/" class="md-nav__link">
+      <a href="../../data-analysis-r/" class="md-nav__link">
         
   
   
@@ -841,7 +979,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-analysis-r/introduction/" class="md-nav__link">
+      <a href="../../data-analysis-r/introduction/" class="md-nav__link">
         
   
   
@@ -869,7 +1007,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-analysis-r/data-import-export/" class="md-nav__link">
+      <a href="../../data-analysis-r/data-import-export/" class="md-nav__link">
         
   
   
@@ -897,7 +1035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-analysis-r/data-cleaning/" class="md-nav__link">
+      <a href="../../data-analysis-r/data-cleaning/" class="md-nav__link">
         
   
   
@@ -925,7 +1063,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-analysis-r/exploratory-analysis/" class="md-nav__link">
+      <a href="../../data-analysis-r/exploratory-analysis/" class="md-nav__link">
         
   
   
@@ -953,7 +1091,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-analysis-r/statistical-analysis/" class="md-nav__link">
+      <a href="../../data-analysis-r/statistical-analysis/" class="md-nav__link">
         
   
   
@@ -981,7 +1119,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-analysis-r/visualization/" class="md-nav__link">
+      <a href="../../data-analysis-r/visualization/" class="md-nav__link">
         
   
   
@@ -1009,7 +1147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-analysis-r/real-datasets/" class="md-nav__link">
+      <a href="../../data-analysis-r/real-datasets/" class="md-nav__link">
         
   
   
@@ -1064,22 +1202,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
+  <a href="#matrices" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Getting Started
+        Matrices
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Getting Started">
+    <nav class="md-nav" aria-label="Matrices">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#r-programming-fundamentals" class="md-nav__link">
+  <a href="#creating-matrices" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📚 R Programming Fundamentals
+        Creating Matrices
       
     </span>
   </a>
@@ -1087,10 +1225,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#data-analysis-with-r" class="md-nav__link">
+  <a href="#accessing-matrix-elements" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📊 Data Analysis with R
+        Accessing Matrix Elements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matrix-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Matrix Operations
       
     </span>
   </a>
@@ -1103,10 +1252,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-use-this-documentation" class="md-nav__link">
+  <a href="#arrays" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How to Use This Documentation
+        Arrays
       
     </span>
   </a>
@@ -1114,10 +1263,121 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#lists" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prerequisites
+        Lists
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lists">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating Lists
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessing-list-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessing List Elements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifying-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modifying Lists
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-frames" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Frames
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Frames">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-data-frames" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating Data Frames
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessing-data-frame-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessing Data Frame Elements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-frame-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Frame Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifying-data-frames" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modifying Data Frames
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#factors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Factors
       
     </span>
   </a>
@@ -1125,10 +1385,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#quick-links" class="md-nav__link">
+  <a href="#checking-data-structures" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Quick Links
+        Checking Data Structures
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Steps
       
     </span>
   </a>
@@ -1155,53 +1426,178 @@
   
 
 
-<h1 id="welcome-to-r-science-documentation">Welcome to R Science Documentation</h1>
-<p>Welcome to the comprehensive guide for learning R programming and data analysis! This documentation is designed to take you from beginner to proficient in R programming and data science.</p>
-<h2 id="getting-started">Getting Started</h2>
-<p>This documentation is organized into two main sections:</p>
-<h3 id="r-programming-fundamentals">📚 R Programming Fundamentals</h3>
-<p>Learn the core concepts of R programming, from basic syntax to advanced data structures. This section covers:</p>
-<ul>
-<li>Getting started with R installation and setup</li>
-<li>Understanding variables and data types</li>
-<li>Working with vectors and operations</li>
-<li>Data structures (matrices, lists, data frames)</li>
-<li>Control flow and loops</li>
-<li>Creating and using functions</li>
-<li>Working with R packages</li>
-</ul>
-<p><a href="r-fundamentals/">Start Learning R Fundamentals →</a></p>
-<h3 id="data-analysis-with-r">📊 Data Analysis with R</h3>
-<p>Apply your R skills to real-world data analysis tasks. This section covers:</p>
-<ul>
-<li>Introduction to data analysis workflows</li>
-<li>Importing and exporting data</li>
-<li>Data cleaning and transformation</li>
-<li>Exploratory data analysis</li>
-<li>Statistical analysis techniques</li>
-<li>Data visualization with ggplot2</li>
-<li>Working with real datasets</li>
-</ul>
-<p><a href="data-analysis-r/">Start Learning Data Analysis →</a></p>
-<h2 id="how-to-use-this-documentation">How to Use This Documentation</h2>
-<ol>
-<li><strong>Beginners</strong>: Start with <a href="r-fundamentals/">R Programming Fundamentals</a> and work through each tutorial sequentially</li>
-<li><strong>Experienced Programmers</strong>: You may skip ahead to specific topics, but reviewing fundamentals is recommended</li>
-<li><strong>Data Analysts</strong>: Focus on the <a href="data-analysis-r/">Data Analysis with R</a> section, but ensure you understand R basics first</li>
-</ol>
-<h2 id="prerequisites">Prerequisites</h2>
-<ul>
-<li>Basic computer literacy</li>
-<li>No prior programming experience required (though it helps)</li>
-<li>R or RStudio installed on your computer (see <a href="r-fundamentals/getting-started/">Getting Started</a>)</li>
-</ul>
-<h2 id="quick-links">Quick Links</h2>
-<ul>
-<li><a href="r-fundamentals/getting-started/">Installation Guide</a></li>
-<li><a href="r-fundamentals/">R Fundamentals Overview</a></li>
-<li><a href="data-analysis-r/">Data Analysis Overview</a></li>
-</ul>
-<p>Happy learning!</p>
+<h1 id="data-structures">Data Structures</h1>
+<p>R provides several data structures beyond vectors. Understanding these is crucial for effective data manipulation.</p>
+<h2 id="matrices">Matrices</h2>
+<p>A matrix is a two-dimensional array of elements of the same type.</p>
+<h3 id="creating-matrices">Creating Matrices</h3>
+<pre><code class="language-r"># From a vector
+matrix(1:12, nrow = 3, ncol = 4)
+matrix(1:12, nrow = 3, ncol = 4, byrow = TRUE)
+
+# Direct creation
+mat &lt;- matrix(c(1, 2, 3, 4, 5, 6), nrow = 2, ncol = 3)
+
+# Using cbind() and rbind()
+col1 &lt;- c(1, 2, 3)
+col2 &lt;- c(4, 5, 6)
+mat &lt;- cbind(col1, col2)  # Combine as columns
+mat &lt;- rbind(col1, col2)  # Combine as rows
+</code></pre>
+<h3 id="accessing-matrix-elements">Accessing Matrix Elements</h3>
+<pre><code class="language-r">mat &lt;- matrix(1:12, nrow = 3, ncol = 4)
+
+mat[1, 2]        # Element at row 1, column 2
+mat[1, ]         # First row
+mat[, 2]         # Second column
+mat[1:2, 2:3]    # Submatrix
+</code></pre>
+<h3 id="matrix-operations">Matrix Operations</h3>
+<pre><code class="language-r">mat1 &lt;- matrix(1:4, nrow = 2)
+mat2 &lt;- matrix(5:8, nrow = 2)
+
+mat1 + mat2      # Element-wise addition
+mat1 * mat2      # Element-wise multiplication
+mat1 %*% mat2    # Matrix multiplication
+t(mat1)          # Transpose
+</code></pre>
+<h2 id="arrays">Arrays</h2>
+<p>Arrays are multi-dimensional generalizations of matrices.</p>
+<pre><code class="language-r"># 3D array
+arr &lt;- array(1:24, dim = c(2, 3, 4))
+arr[1, 2, 3]     # Access element
+dim(arr)         # Dimensions
+</code></pre>
+<h2 id="lists">Lists</h2>
+<p>Lists can contain elements of different types, including other lists.</p>
+<h3 id="creating-lists">Creating Lists</h3>
+<pre><code class="language-r"># Basic list
+my_list &lt;- list(1, &quot;hello&quot;, TRUE, c(1, 2, 3))
+
+# Named list
+person &lt;- list(
+  name = &quot;Alice&quot;,
+  age = 30,
+  scores = c(85, 90, 88)
+)
+</code></pre>
+<h3 id="accessing-list-elements">Accessing List Elements</h3>
+<pre><code class="language-r">person &lt;- list(name = &quot;Alice&quot;, age = 30, scores = c(85, 90, 88))
+
+# By index
+person[[1]]           # &quot;Alice&quot;
+person[[&quot;name&quot;]]      # &quot;Alice&quot;
+person$name           # &quot;Alice&quot;
+
+# Multiple elements (returns a list)
+person[c(&quot;name&quot;, &quot;age&quot;)]
+</code></pre>
+<h3 id="modifying-lists">Modifying Lists</h3>
+<pre><code class="language-r">person$city &lt;- &quot;New York&quot;
+person[[&quot;email&quot;]] &lt;- &quot;alice@example.com&quot;
+person[[4]] &lt;- &quot;New element&quot;
+</code></pre>
+<h2 id="data-frames">Data Frames</h2>
+<p>Data frames are the most important data structure for data analysis - they're like tables with rows and columns.</p>
+<h3 id="creating-data-frames">Creating Data Frames</h3>
+<pre><code class="language-r"># From vectors
+df &lt;- data.frame(
+  name = c(&quot;Alice&quot;, &quot;Bob&quot;, &quot;Charlie&quot;),
+  age = c(25, 30, 35),
+  city = c(&quot;NYC&quot;, &quot;LA&quot;, &quot;Chicago&quot;)
+)
+
+# From existing data
+df2 &lt;- data.frame(
+  x = 1:5,
+  y = letters[1:5],
+  z = c(TRUE, FALSE, TRUE, FALSE, TRUE)
+)
+</code></pre>
+<h3 id="accessing-data-frame-elements">Accessing Data Frame Elements</h3>
+<pre><code class="language-r">df &lt;- data.frame(
+  name = c(&quot;Alice&quot;, &quot;Bob&quot;, &quot;Charlie&quot;),
+  age = c(25, 30, 35),
+  city = c(&quot;NYC&quot;, &quot;LA&quot;, &quot;Chicago&quot;)
+)
+
+# By column name
+df$name
+df[[&quot;age&quot;]]
+df[, &quot;city&quot;]
+
+# By position
+df[1, ]           # First row
+df[, 2]           # Second column
+df[1, 2]          # Element at row 1, col 2
+
+# Subsetting
+df[df$age &gt; 27, ]
+df[, c(&quot;name&quot;, &quot;age&quot;)]
+</code></pre>
+<h3 id="data-frame-functions">Data Frame Functions</h3>
+<pre><code class="language-r">df &lt;- data.frame(
+  name = c(&quot;Alice&quot;, &quot;Bob&quot;, &quot;Charlie&quot;),
+  age = c(25, 30, 35),
+  city = c(&quot;NYC&quot;, &quot;LA&quot;, &quot;Chicago&quot;)
+)
+
+nrow(df)          # Number of rows
+ncol(df)          # Number of columns
+dim(df)           # Dimensions
+names(df)         # Column names
+str(df)           # Structure
+summary(df)       # Summary statistics
+head(df)          # First few rows
+tail(df)          # Last few rows
+</code></pre>
+<h3 id="modifying-data-frames">Modifying Data Frames</h3>
+<pre><code class="language-r"># Add new column
+df$salary &lt;- c(50000, 60000, 70000)
+
+# Add new row
+df &lt;- rbind(df, data.frame(
+  name = &quot;David&quot;,
+  age = 28,
+  city = &quot;Boston&quot;,
+  salary = 55000
+))
+
+# Rename columns
+names(df)[1] &lt;- &quot;full_name&quot;
+colnames(df) &lt;- c(&quot;full_name&quot;, &quot;age&quot;, &quot;city&quot;, &quot;salary&quot;)
+</code></pre>
+<h2 id="factors">Factors</h2>
+<p>Factors are used to represent categorical data.</p>
+<pre><code class="language-r"># Creating factors
+gender &lt;- factor(c(&quot;M&quot;, &quot;F&quot;, &quot;M&quot;, &quot;F&quot;, &quot;M&quot;))
+levels(gender)    # &quot;F&quot; &quot;M&quot;
+
+# Ordered factors
+size &lt;- factor(c(&quot;S&quot;, &quot;M&quot;, &quot;L&quot;, &quot;M&quot;, &quot;S&quot;),
+               levels = c(&quot;S&quot;, &quot;M&quot;, &quot;L&quot;),
+               ordered = TRUE)
+
+# Converting to/from factors
+as.factor(c(1, 2, 3))
+as.numeric(factor(c(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;)))
+</code></pre>
+<h2 id="checking-data-structures">Checking Data Structures</h2>
+<pre><code class="language-r"># Type checking
+is.vector(x)
+is.matrix(x)
+is.array(x)
+is.list(x)
+is.data.frame(x)
+is.factor(x)
+
+# Class information
+class(x)
+typeof(x)
+str(x)
+</code></pre>
+<h2 id="next-steps">Next Steps</h2>
+<p>Learn about <a href="../control-flow/">Control Flow</a> to add logic and loops to your R programs.</p>
 
 
 
@@ -1257,10 +1653,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

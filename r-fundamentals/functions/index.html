@@ -8,29 +8,31 @@
       
       
       
-        <link rel="canonical" href="https://dataidea-science.github.io/dataidea-R/">
+        <link rel="canonical" href="https://dataidea-science.github.io/dataidea-R/r-fundamentals/functions/">
       
       
+        <link rel="prev" href="../control-flow/">
       
-        <link rel="next" href="r-fundamentals/">
+      
+        <link rel="next" href="../packages/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>R Science Documentation</title>
+        <title>Functions - R Science Documentation</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -49,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-r-science-documentation" class="md-skip">
+        <a href="#functions" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +90,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="R Science Documentation" class="md-header__button md-logo" aria-label="R Science Documentation" data-md-component="logo">
+    <a href="../.." title="R Science Documentation" class="md-header__button md-logo" aria-label="R Science Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -108,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Functions
             
           </span>
         </div>
@@ -219,11 +221,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -240,11 +240,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="r-fundamentals/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -264,7 +266,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="data-analysis-r/" class="md-tabs__link">
+        <a href="../../data-analysis-r/" class="md-tabs__link">
           
   
   
@@ -298,7 +300,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="R Science Documentation" class="md-nav__button md-logo" aria-label="R Science Documentation" data-md-component="logo">
+    <a href="../.." title="R Science Documentation" class="md-nav__button md-logo" aria-label="R Science Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -325,37 +327,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Home
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -371,98 +346,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Getting Started
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Getting Started">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#r-programming-fundamentals" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📚 R Programming Fundamentals
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-analysis-with-r" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📊 Data Analysis with R
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-use-this-documentation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How to Use This Documentation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Prerequisites
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quick-links" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quick Links
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -471,28 +354,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -510,7 +396,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -528,7 +414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="r-fundamentals/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -556,7 +442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="r-fundamentals/getting-started/" class="md-nav__link">
+      <a href="../getting-started/" class="md-nav__link">
         
   
   
@@ -584,7 +470,7 @@
   
   
     <li class="md-nav__item">
-      <a href="r-fundamentals/variables-data-types/" class="md-nav__link">
+      <a href="../variables-data-types/" class="md-nav__link">
         
   
   
@@ -612,7 +498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="r-fundamentals/vectors-operations/" class="md-nav__link">
+      <a href="../vectors-operations/" class="md-nav__link">
         
   
   
@@ -640,7 +526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="r-fundamentals/data-structures/" class="md-nav__link">
+      <a href="../data-structures/" class="md-nav__link">
         
   
   
@@ -668,7 +554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="r-fundamentals/control-flow/" class="md-nav__link">
+      <a href="../control-flow/" class="md-nav__link">
         
   
   
@@ -693,10 +579,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="r-fundamentals/functions/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Functions
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -712,6 +625,264 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#built-in-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Built-in Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-your-own-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating Your Own Functions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating Your Own Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-function-syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Function Syntax
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#functions-with-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Functions with Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Default Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#named-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Named Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#return-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Return Values
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variable-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variable Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-function-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Function Features
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Function Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variable-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variable Arguments (...)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anonymous-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anonymous Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-as-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Function as Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practical Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#statistical-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Statistical Function
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-processing-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Processing Function
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recursive-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recursive Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Handling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -724,7 +895,7 @@
   
   
     <li class="md-nav__item">
-      <a href="r-fundamentals/packages/" class="md-nav__link">
+      <a href="../packages/" class="md-nav__link">
         
   
   
@@ -813,7 +984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-analysis-r/" class="md-nav__link">
+      <a href="../../data-analysis-r/" class="md-nav__link">
         
   
   
@@ -841,7 +1012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-analysis-r/introduction/" class="md-nav__link">
+      <a href="../../data-analysis-r/introduction/" class="md-nav__link">
         
   
   
@@ -869,7 +1040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-analysis-r/data-import-export/" class="md-nav__link">
+      <a href="../../data-analysis-r/data-import-export/" class="md-nav__link">
         
   
   
@@ -897,7 +1068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-analysis-r/data-cleaning/" class="md-nav__link">
+      <a href="../../data-analysis-r/data-cleaning/" class="md-nav__link">
         
   
   
@@ -925,7 +1096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-analysis-r/exploratory-analysis/" class="md-nav__link">
+      <a href="../../data-analysis-r/exploratory-analysis/" class="md-nav__link">
         
   
   
@@ -953,7 +1124,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-analysis-r/statistical-analysis/" class="md-nav__link">
+      <a href="../../data-analysis-r/statistical-analysis/" class="md-nav__link">
         
   
   
@@ -981,7 +1152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-analysis-r/visualization/" class="md-nav__link">
+      <a href="../../data-analysis-r/visualization/" class="md-nav__link">
         
   
   
@@ -1009,7 +1180,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-analysis-r/real-datasets/" class="md-nav__link">
+      <a href="../../data-analysis-r/real-datasets/" class="md-nav__link">
         
   
   
@@ -1064,22 +1235,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
+  <a href="#built-in-functions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Getting Started
+        Built-in Functions
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Getting Started">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-your-own-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating Your Own Functions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating Your Own Functions">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#r-programming-fundamentals" class="md-nav__link">
+  <a href="#basic-function-syntax" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📚 R Programming Fundamentals
+        Basic Function Syntax
       
     </span>
   </a>
@@ -1087,10 +1269,32 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#data-analysis-with-r" class="md-nav__link">
+  <a href="#functions-with-parameters" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📊 Data Analysis with R
+        Functions with Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Default Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#named-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Named Arguments
       
     </span>
   </a>
@@ -1103,10 +1307,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-use-this-documentation" class="md-nav__link">
+  <a href="#return-values" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How to Use This Documentation
+        Return Values
       
     </span>
   </a>
@@ -1114,10 +1318,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#variable-scope" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prerequisites
+        Variable Scope
       
     </span>
   </a>
@@ -1125,10 +1329,143 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#quick-links" class="md-nav__link">
+  <a href="#advanced-function-features" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Quick Links
+        Advanced Function Features
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Function Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variable-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variable Arguments (...)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anonymous-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anonymous Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-as-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Function as Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practical Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#statistical-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Statistical Function
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-processing-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Processing Function
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recursive-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recursive Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Handling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Steps
       
     </span>
   </a>
@@ -1155,53 +1492,211 @@
   
 
 
-<h1 id="welcome-to-r-science-documentation">Welcome to R Science Documentation</h1>
-<p>Welcome to the comprehensive guide for learning R programming and data analysis! This documentation is designed to take you from beginner to proficient in R programming and data science.</p>
-<h2 id="getting-started">Getting Started</h2>
-<p>This documentation is organized into two main sections:</p>
-<h3 id="r-programming-fundamentals">📚 R Programming Fundamentals</h3>
-<p>Learn the core concepts of R programming, from basic syntax to advanced data structures. This section covers:</p>
-<ul>
-<li>Getting started with R installation and setup</li>
-<li>Understanding variables and data types</li>
-<li>Working with vectors and operations</li>
-<li>Data structures (matrices, lists, data frames)</li>
-<li>Control flow and loops</li>
-<li>Creating and using functions</li>
-<li>Working with R packages</li>
-</ul>
-<p><a href="r-fundamentals/">Start Learning R Fundamentals →</a></p>
-<h3 id="data-analysis-with-r">📊 Data Analysis with R</h3>
-<p>Apply your R skills to real-world data analysis tasks. This section covers:</p>
-<ul>
-<li>Introduction to data analysis workflows</li>
-<li>Importing and exporting data</li>
-<li>Data cleaning and transformation</li>
-<li>Exploratory data analysis</li>
-<li>Statistical analysis techniques</li>
-<li>Data visualization with ggplot2</li>
-<li>Working with real datasets</li>
-</ul>
-<p><a href="data-analysis-r/">Start Learning Data Analysis →</a></p>
-<h2 id="how-to-use-this-documentation">How to Use This Documentation</h2>
+<h1 id="functions">Functions</h1>
+<p>Functions are reusable blocks of code that perform specific tasks. They help organize code and avoid repetition.</p>
+<h2 id="built-in-functions">Built-in Functions</h2>
+<p>R comes with many built-in functions:</p>
+<pre><code class="language-r"># Mathematical functions
+sqrt(16)
+abs(-5)
+round(3.14159, 2)
+ceiling(3.2)
+floor(3.8)
+
+# Statistical functions
+mean(c(1, 2, 3, 4, 5))
+median(c(1, 2, 3, 4, 5))
+sd(c(1, 2, 3, 4, 5))
+
+# String functions
+paste(&quot;Hello&quot;, &quot;World&quot;)
+paste0(&quot;Hello&quot;, &quot;World&quot;)  # No separator
+nchar(&quot;Hello&quot;)
+toupper(&quot;hello&quot;)
+tolower(&quot;HELLO&quot;)
+</code></pre>
+<h2 id="creating-your-own-functions">Creating Your Own Functions</h2>
+<h3 id="basic-function-syntax">Basic Function Syntax</h3>
+<pre><code class="language-r"># Simple function
+greet &lt;- function() {
+  print(&quot;Hello, World!&quot;)
+}
+
+greet()
+</code></pre>
+<h3 id="functions-with-parameters">Functions with Parameters</h3>
+<pre><code class="language-r"># Function with one parameter
+square &lt;- function(x) {
+  return(x^2)
+}
+
+square(5)  # 25
+
+# Function with multiple parameters
+add &lt;- function(a, b) {
+  return(a + b)
+}
+
+add(3, 5)  # 8
+</code></pre>
+<h3 id="default-parameters">Default Parameters</h3>
+<pre><code class="language-r"># Function with default values
+power &lt;- function(x, exponent = 2) {
+  return(x^exponent)
+}
+
+power(5)        # 25 (uses default exponent = 2)
+power(5, 3)     # 125 (explicit exponent = 3)
+</code></pre>
+<h3 id="named-arguments">Named Arguments</h3>
+<pre><code class="language-r"># Function with named parameters
+create_person &lt;- function(name, age, city = &quot;Unknown&quot;) {
+  return(list(name = name, age = age, city = city))
+}
+
+create_person(&quot;Alice&quot;, 30)
+create_person(name = &quot;Bob&quot;, age = 25, city = &quot;NYC&quot;)
+create_person(age = 28, name = &quot;Charlie&quot;)  # Order doesn't matter
+</code></pre>
+<h2 id="return-values">Return Values</h2>
+<pre><code class="language-r"># Explicit return
+calculate &lt;- function(x, y) {
+  sum_result &lt;- x + y
+  product_result &lt;- x * y
+  return(list(sum = sum_result, product = product_result))
+}
+
+# Implicit return (last expression)
+multiply &lt;- function(x, y) {
+  x * y  # Automatically returned
+}
+
+# Multiple return values
+stats &lt;- function(x) {
+  c(mean = mean(x), median = median(x), sd = sd(x))
+}
+</code></pre>
+<h2 id="variable-scope">Variable Scope</h2>
+<pre><code class="language-r"># Global vs local variables
+global_var &lt;- 10
+
+my_function &lt;- function() {
+  local_var &lt;- 5
+  print(global_var)  # Can access global
+  print(local_var)   # Can access local
+}
+
+my_function()
+# print(local_var)  # Error: local_var not found outside function
+</code></pre>
+<h2 id="advanced-function-features">Advanced Function Features</h2>
+<h3 id="variable-arguments">Variable Arguments (...)</h3>
+<pre><code class="language-r"># Function with variable number of arguments
+sum_all &lt;- function(...) {
+  args &lt;- list(...)
+  return(sum(unlist(args)))
+}
+
+sum_all(1, 2, 3)
+sum_all(1, 2, 3, 4, 5)
+</code></pre>
+<h3 id="anonymous-functions">Anonymous Functions</h3>
+<pre><code class="language-r"># Functions without names
+(function(x) x^2)(5)  # 25
+
+# Useful with apply functions
+sapply(1:5, function(x) x^2)
+</code></pre>
+<h3 id="function-as-arguments">Function as Arguments</h3>
+<pre><code class="language-r"># Pass function as argument
+apply_operation &lt;- function(x, func) {
+  return(func(x))
+}
+
+apply_operation(5, sqrt)
+apply_operation(5, function(x) x^3)
+</code></pre>
+<h2 id="practical-examples">Practical Examples</h2>
+<h3 id="statistical-function">Statistical Function</h3>
+<pre><code class="language-r"># Calculate z-scores
+z_score &lt;- function(x) {
+  mean_x &lt;- mean(x, na.rm = TRUE)
+  sd_x &lt;- sd(x, na.rm = TRUE)
+  return((x - mean_x) / sd_x)
+}
+
+data &lt;- c(10, 20, 30, 40, 50)
+z_scores &lt;- z_score(data)
+</code></pre>
+<h3 id="data-processing-function">Data Processing Function</h3>
+<pre><code class="language-r"># Clean and summarize data
+summarize_data &lt;- function(df, column) {
+  if (!column %in% names(df)) {
+    stop(&quot;Column not found&quot;)
+  }
+
+  data &lt;- df[[column]]
+  return(list(
+    mean = mean(data, na.rm = TRUE),
+    median = median(data, na.rm = TRUE),
+    min = min(data, na.rm = TRUE),
+    max = max(data, na.rm = TRUE),
+    missing = sum(is.na(data))
+  ))
+}
+
+df &lt;- data.frame(x = 1:10, y = rnorm(10))
+summarize_data(df, &quot;x&quot;)
+</code></pre>
+<h3 id="recursive-functions">Recursive Functions</h3>
+<pre><code class="language-r"># Factorial function
+factorial_recursive &lt;- function(n) {
+  if (n &lt;= 1) {
+    return(1)
+  } else {
+    return(n * factorial_recursive(n - 1))
+  }
+}
+
+factorial_recursive(5)  # 120
+</code></pre>
+<h2 id="error-handling">Error Handling</h2>
+<pre><code class="language-r"># Function with error checking
+safe_divide &lt;- function(a, b) {
+  if (b == 0) {
+    stop(&quot;Division by zero is not allowed&quot;)
+  }
+  return(a / b)
+}
+
+safe_divide(10, 2)   # 5
+safe_divide(10, 0)   # Error
+</code></pre>
+<h2 id="documentation">Documentation</h2>
+<pre><code class="language-r"># Add comments to document functions
+calculate_bmi &lt;- function(weight_kg, height_m) {
+  # Calculate Body Mass Index
+  # Args:
+  #   weight_kg: weight in kilograms
+  #   height_m: height in meters
+  # Returns:
+  #   BMI value
+  bmi &lt;- weight_kg / (height_m^2)
+  return(bmi)
+}
+</code></pre>
+<h2 id="best-practices">Best Practices</h2>
 <ol>
-<li><strong>Beginners</strong>: Start with <a href="r-fundamentals/">R Programming Fundamentals</a> and work through each tutorial sequentially</li>
-<li><strong>Experienced Programmers</strong>: You may skip ahead to specific topics, but reviewing fundamentals is recommended</li>
-<li><strong>Data Analysts</strong>: Focus on the <a href="data-analysis-r/">Data Analysis with R</a> section, but ensure you understand R basics first</li>
+<li><strong>Use descriptive names</strong>: <code>calculate_mean</code> is better than <code>cm</code></li>
+<li><strong>Keep functions focused</strong>: One function should do one thing</li>
+<li><strong>Document your functions</strong>: Add comments explaining purpose and parameters</li>
+<li><strong>Check inputs</strong>: Validate function arguments</li>
+<li><strong>Handle errors</strong>: Use appropriate error handling</li>
+<li><strong>Return consistent types</strong>: Make return values predictable</li>
+<li><strong>Avoid global variables</strong>: Pass values as parameters</li>
 </ol>
-<h2 id="prerequisites">Prerequisites</h2>
-<ul>
-<li>Basic computer literacy</li>
-<li>No prior programming experience required (though it helps)</li>
-<li>R or RStudio installed on your computer (see <a href="r-fundamentals/getting-started/">Getting Started</a>)</li>
-</ul>
-<h2 id="quick-links">Quick Links</h2>
-<ul>
-<li><a href="r-fundamentals/getting-started/">Installation Guide</a></li>
-<li><a href="r-fundamentals/">R Fundamentals Overview</a></li>
-<li><a href="data-analysis-r/">Data Analysis Overview</a></li>
-</ul>
-<p>Happy learning!</p>
+<h2 id="next-steps">Next Steps</h2>
+<p>Learn about <a href="../packages/">Working with Packages</a> to extend R's functionality.</p>
 
 
 
@@ -1257,10 +1752,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

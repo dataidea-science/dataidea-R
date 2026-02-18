@@ -8,29 +8,31 @@
       
       
       
-        <link rel="canonical" href="https://dataidea-science.github.io/dataidea-R/">
+        <link rel="canonical" href="https://dataidea-science.github.io/dataidea-R/r-fundamentals/vectors-operations/">
       
       
+        <link rel="prev" href="../variables-data-types/">
       
-        <link rel="next" href="r-fundamentals/">
+      
+        <link rel="next" href="../data-structures/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>R Science Documentation</title>
+        <title>Vectors and Basic Operations - R Science Documentation</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -49,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-r-science-documentation" class="md-skip">
+        <a href="#vectors-and-basic-operations" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +90,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="R Science Documentation" class="md-header__button md-logo" aria-label="R Science Documentation" data-md-component="logo">
+    <a href="../.." title="R Science Documentation" class="md-header__button md-logo" aria-label="R Science Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -108,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Vectors and Basic Operations
             
           </span>
         </div>
@@ -219,11 +221,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -240,11 +240,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="r-fundamentals/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -264,7 +266,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="data-analysis-r/" class="md-tabs__link">
+        <a href="../../data-analysis-r/" class="md-tabs__link">
           
   
   
@@ -298,7 +300,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="R Science Documentation" class="md-nav__button md-logo" aria-label="R Science Documentation" data-md-component="logo">
+    <a href="../.." title="R Science Documentation" class="md-nav__button md-logo" aria-label="R Science Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -325,37 +327,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Home
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -371,98 +346,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Getting Started
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Getting Started">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#r-programming-fundamentals" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📚 R Programming Fundamentals
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-analysis-with-r" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📊 Data Analysis with R
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-use-this-documentation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How to Use This Documentation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Prerequisites
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quick-links" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quick Links
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -471,28 +354,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -510,7 +396,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -528,7 +414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="r-fundamentals/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -556,7 +442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="r-fundamentals/getting-started/" class="md-nav__link">
+      <a href="../getting-started/" class="md-nav__link">
         
   
   
@@ -584,7 +470,7 @@
   
   
     <li class="md-nav__item">
-      <a href="r-fundamentals/variables-data-types/" class="md-nav__link">
+      <a href="../variables-data-types/" class="md-nav__link">
         
   
   
@@ -609,10 +495,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="r-fundamentals/vectors-operations/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vectors and Basic Operations
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -628,6 +541,259 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-vectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What are Vectors?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-vectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating Vectors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating Vectors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-c-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using c() function
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using : operator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-seq-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using seq() function
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-rep-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using rep() function
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vector-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vector Operations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vector Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arithmetic-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arithmetic Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recycling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recycling
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-vector-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessing Vector Elements
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Accessing Vector Elements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#by-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        By Index
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#by-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        By Condition
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vector-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vector Functions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vector Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#length-and-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Length and Summary
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statistical-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Statistical Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sorting-and-ordering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sorting and Ordering
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vector-coercion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vector Coercion
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-vector-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Vector Operations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -640,7 +806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="r-fundamentals/data-structures/" class="md-nav__link">
+      <a href="../data-structures/" class="md-nav__link">
         
   
   
@@ -668,7 +834,7 @@
   
   
     <li class="md-nav__item">
-      <a href="r-fundamentals/control-flow/" class="md-nav__link">
+      <a href="../control-flow/" class="md-nav__link">
         
   
   
@@ -696,7 +862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="r-fundamentals/functions/" class="md-nav__link">
+      <a href="../functions/" class="md-nav__link">
         
   
   
@@ -724,7 +890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="r-fundamentals/packages/" class="md-nav__link">
+      <a href="../packages/" class="md-nav__link">
         
   
   
@@ -813,7 +979,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-analysis-r/" class="md-nav__link">
+      <a href="../../data-analysis-r/" class="md-nav__link">
         
   
   
@@ -841,7 +1007,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-analysis-r/introduction/" class="md-nav__link">
+      <a href="../../data-analysis-r/introduction/" class="md-nav__link">
         
   
   
@@ -869,7 +1035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-analysis-r/data-import-export/" class="md-nav__link">
+      <a href="../../data-analysis-r/data-import-export/" class="md-nav__link">
         
   
   
@@ -897,7 +1063,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-analysis-r/data-cleaning/" class="md-nav__link">
+      <a href="../../data-analysis-r/data-cleaning/" class="md-nav__link">
         
   
   
@@ -925,7 +1091,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-analysis-r/exploratory-analysis/" class="md-nav__link">
+      <a href="../../data-analysis-r/exploratory-analysis/" class="md-nav__link">
         
   
   
@@ -953,7 +1119,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-analysis-r/statistical-analysis/" class="md-nav__link">
+      <a href="../../data-analysis-r/statistical-analysis/" class="md-nav__link">
         
   
   
@@ -981,7 +1147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-analysis-r/visualization/" class="md-nav__link">
+      <a href="../../data-analysis-r/visualization/" class="md-nav__link">
         
   
   
@@ -1009,7 +1175,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-analysis-r/real-datasets/" class="md-nav__link">
+      <a href="../../data-analysis-r/real-datasets/" class="md-nav__link">
         
   
   
@@ -1064,22 +1230,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
+  <a href="#what-are-vectors" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Getting Started
+        What are Vectors?
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Getting Started">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-vectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating Vectors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating Vectors">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#r-programming-fundamentals" class="md-nav__link">
+  <a href="#using-c-function" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📚 R Programming Fundamentals
+        Using c() function
       
     </span>
   </a>
@@ -1087,10 +1264,32 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#data-analysis-with-r" class="md-nav__link">
+  <a href="#using-operator" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📊 Data Analysis with R
+        Using : operator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-seq-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using seq() function
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-rep-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using rep() function
       
     </span>
   </a>
@@ -1103,10 +1302,138 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-use-this-documentation" class="md-nav__link">
+  <a href="#vector-operations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How to Use This Documentation
+        Vector Operations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vector Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arithmetic-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arithmetic Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recycling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recycling
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-vector-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessing Vector Elements
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Accessing Vector Elements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#by-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        By Index
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#by-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        By Condition
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vector-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vector Functions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vector Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#length-and-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Length and Summary
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statistical-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Statistical Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sorting-and-ordering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sorting and Ordering
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vector-coercion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vector Coercion
       
     </span>
   </a>
@@ -1114,10 +1441,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#common-vector-operations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prerequisites
+        Common Vector Operations
       
     </span>
   </a>
@@ -1125,10 +1452,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#quick-links" class="md-nav__link">
+  <a href="#next-steps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Quick Links
+        Next Steps
       
     </span>
   </a>
@@ -1155,53 +1482,136 @@
   
 
 
-<h1 id="welcome-to-r-science-documentation">Welcome to R Science Documentation</h1>
-<p>Welcome to the comprehensive guide for learning R programming and data analysis! This documentation is designed to take you from beginner to proficient in R programming and data science.</p>
-<h2 id="getting-started">Getting Started</h2>
-<p>This documentation is organized into two main sections:</p>
-<h3 id="r-programming-fundamentals">📚 R Programming Fundamentals</h3>
-<p>Learn the core concepts of R programming, from basic syntax to advanced data structures. This section covers:</p>
-<ul>
-<li>Getting started with R installation and setup</li>
-<li>Understanding variables and data types</li>
-<li>Working with vectors and operations</li>
-<li>Data structures (matrices, lists, data frames)</li>
-<li>Control flow and loops</li>
-<li>Creating and using functions</li>
-<li>Working with R packages</li>
-</ul>
-<p><a href="r-fundamentals/">Start Learning R Fundamentals →</a></p>
-<h3 id="data-analysis-with-r">📊 Data Analysis with R</h3>
-<p>Apply your R skills to real-world data analysis tasks. This section covers:</p>
-<ul>
-<li>Introduction to data analysis workflows</li>
-<li>Importing and exporting data</li>
-<li>Data cleaning and transformation</li>
-<li>Exploratory data analysis</li>
-<li>Statistical analysis techniques</li>
-<li>Data visualization with ggplot2</li>
-<li>Working with real datasets</li>
-</ul>
-<p><a href="data-analysis-r/">Start Learning Data Analysis →</a></p>
-<h2 id="how-to-use-this-documentation">How to Use This Documentation</h2>
-<ol>
-<li><strong>Beginners</strong>: Start with <a href="r-fundamentals/">R Programming Fundamentals</a> and work through each tutorial sequentially</li>
-<li><strong>Experienced Programmers</strong>: You may skip ahead to specific topics, but reviewing fundamentals is recommended</li>
-<li><strong>Data Analysts</strong>: Focus on the <a href="data-analysis-r/">Data Analysis with R</a> section, but ensure you understand R basics first</li>
-</ol>
-<h2 id="prerequisites">Prerequisites</h2>
-<ul>
-<li>Basic computer literacy</li>
-<li>No prior programming experience required (though it helps)</li>
-<li>R or RStudio installed on your computer (see <a href="r-fundamentals/getting-started/">Getting Started</a>)</li>
-</ul>
-<h2 id="quick-links">Quick Links</h2>
-<ul>
-<li><a href="r-fundamentals/getting-started/">Installation Guide</a></li>
-<li><a href="r-fundamentals/">R Fundamentals Overview</a></li>
-<li><a href="data-analysis-r/">Data Analysis Overview</a></li>
-</ul>
-<p>Happy learning!</p>
+<h1 id="vectors-and-basic-operations">Vectors and Basic Operations</h1>
+<h2 id="what-are-vectors">What are Vectors?</h2>
+<p>Vectors are the most basic data structure in R. A vector is a sequence of elements of the same type.</p>
+<h2 id="creating-vectors">Creating Vectors</h2>
+<h3 id="using-c-function">Using c() function</h3>
+<pre><code class="language-r"># Numeric vector
+numbers &lt;- c(1, 2, 3, 4, 5)
+ages &lt;- c(25, 30, 35, 40)
+
+# Character vector
+names &lt;- c(&quot;Alice&quot;, &quot;Bob&quot;, &quot;Charlie&quot;)
+colors &lt;- c(&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;)
+
+# Logical vector
+flags &lt;- c(TRUE, FALSE, TRUE)
+</code></pre>
+<h3 id="using-operator">Using : operator</h3>
+<pre><code class="language-r"># Sequence of integers
+1:10
+10:1
+seq &lt;- 5:15
+</code></pre>
+<h3 id="using-seq-function">Using seq() function</h3>
+<pre><code class="language-r"># More control over sequences
+seq(1, 10, by = 2)      # 1, 3, 5, 7, 9
+seq(0, 1, length.out = 5)  # 0.00 0.25 0.50 0.75 1.00
+</code></pre>
+<h3 id="using-rep-function">Using rep() function</h3>
+<pre><code class="language-r"># Repeat values
+rep(5, times = 3)       # 5 5 5
+rep(c(1, 2), times = 2)  # 1 2 1 2
+rep(c(1, 2), each = 2)  # 1 1 2 2
+</code></pre>
+<h2 id="vector-operations">Vector Operations</h2>
+<h3 id="arithmetic-operations">Arithmetic Operations</h3>
+<pre><code class="language-r">x &lt;- c(1, 2, 3, 4, 5)
+y &lt;- c(10, 20, 30, 40, 50)
+
+# Element-wise operations
+x + y      # 11 22 33 44 55
+x * y      # 10 40 90 160 250
+x ^ 2      # 1 4 9 16 25
+sqrt(x)    # 1.00 1.41 1.73 2.00 2.24
+</code></pre>
+<h3 id="recycling">Recycling</h3>
+<pre><code class="language-r"># R recycles shorter vectors
+c(1, 2, 3) + 10        # 11 12 13
+c(1, 2, 3) * c(2, 3)   # 2 6 6 (with warning)
+</code></pre>
+<h2 id="accessing-vector-elements">Accessing Vector Elements</h2>
+<h3 id="by-index">By Index</h3>
+<pre><code class="language-r">vec &lt;- c(10, 20, 30, 40, 50)
+
+# Single element (1-indexed)
+vec[1]      # 10
+vec[3]      # 30
+
+# Multiple elements
+vec[c(1, 3, 5)]  # 10 30 50
+vec[1:3]         # 10 20 30
+
+# Negative indexing (exclude elements)
+vec[-1]     # 20 30 40 50
+vec[-c(1, 3)]  # 20 40 50
+</code></pre>
+<h3 id="by-condition">By Condition</h3>
+<pre><code class="language-r">vec &lt;- c(10, 20, 30, 40, 50)
+
+# Logical indexing
+vec[vec &gt; 25]           # 30 40 50
+vec[vec %% 20 == 0]     # 20 40
+
+# Using which()
+which(vec &gt; 25)         # 3 4 5
+vec[which(vec &gt; 25)]    # 30 40 50
+</code></pre>
+<h2 id="vector-functions">Vector Functions</h2>
+<h3 id="length-and-summary">Length and Summary</h3>
+<pre><code class="language-r">vec &lt;- c(1, 2, 3, 4, 5, NA, 7)
+
+length(vec)      # 7
+sum(vec)         # 22 (NA excluded)
+sum(vec, na.rm = TRUE)  # 22
+mean(vec, na.rm = TRUE) # 3.67
+median(vec, na.rm = TRUE)
+min(vec, na.rm = TRUE)
+max(vec, na.rm = TRUE)
+range(vec, na.rm = TRUE)
+</code></pre>
+<h3 id="statistical-functions">Statistical Functions</h3>
+<pre><code class="language-r">vec &lt;- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+
+mean(vec)        # 5.5
+median(vec)      # 5.5
+sd(vec)          # Standard deviation
+var(vec)         # Variance
+quantile(vec)    # Quartiles
+summary(vec)     # Summary statistics
+</code></pre>
+<h3 id="sorting-and-ordering">Sorting and Ordering</h3>
+<pre><code class="language-r">vec &lt;- c(5, 2, 8, 1, 9)
+
+sort(vec)                    # 1 2 5 8 9
+sort(vec, decreasing = TRUE) # 9 8 5 2 1
+order(vec)                   # 4 2 1 3 5 (indices)
+vec[order(vec)]             # Same as sort(vec)
+</code></pre>
+<h2 id="vector-coercion">Vector Coercion</h2>
+<p>R automatically converts vectors to a common type:</p>
+<pre><code class="language-r"># Mixed types get coerced
+mixed &lt;- c(1, &quot;two&quot;, 3)      # All become character
+mixed2 &lt;- c(TRUE, 1, 2.5)    # All become numeric
+</code></pre>
+<h2 id="common-vector-operations">Common Vector Operations</h2>
+<pre><code class="language-r"># Concatenation
+vec1 &lt;- c(1, 2, 3)
+vec2 &lt;- c(4, 5, 6)
+combined &lt;- c(vec1, vec2)    # 1 2 3 4 5 6
+
+# Unique values
+vec &lt;- c(1, 2, 2, 3, 3, 3)
+unique(vec)                  # 1 2 3
+
+# Membership testing
+vec &lt;- c(1, 2, 3, 4, 5)
+3 %in% vec                   # TRUE
+c(3, 6) %in% vec             # TRUE FALSE
+</code></pre>
+<h2 id="next-steps">Next Steps</h2>
+<p>Learn about more complex <a href="../data-structures/">Data Structures</a> like matrices, lists, and data frames.</p>
 
 
 
@@ -1257,10 +1667,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

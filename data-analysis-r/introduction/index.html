@@ -8,29 +8,31 @@
       
       
       
-        <link rel="canonical" href="https://dataidea-science.github.io/dataidea-R/">
+        <link rel="canonical" href="https://dataidea-science.github.io/dataidea-R/data-analysis-r/introduction/">
       
       
+        <link rel="prev" href="../">
       
-        <link rel="next" href="r-fundamentals/">
+      
+        <link rel="next" href="../data-import-export/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>R Science Documentation</title>
+        <title>Introduction to Data Analysis - R Science Documentation</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -49,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-r-science-documentation" class="md-skip">
+        <a href="#introduction-to-data-analysis" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +90,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="R Science Documentation" class="md-header__button md-logo" aria-label="R Science Documentation" data-md-component="logo">
+    <a href="../.." title="R Science Documentation" class="md-header__button md-logo" aria-label="R Science Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -108,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Introduction to Data Analysis
             
           </span>
         </div>
@@ -219,11 +221,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -244,7 +244,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="r-fundamentals/" class="md-tabs__link">
+        <a href="../../r-fundamentals/" class="md-tabs__link">
           
   
   
@@ -260,11 +260,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="data-analysis-r/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -298,7 +300,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="R Science Documentation" class="md-nav__button md-logo" aria-label="R Science Documentation" data-md-component="logo">
+    <a href="../.." title="R Science Documentation" class="md-nav__button md-logo" aria-label="R Science Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -325,37 +327,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Home
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -371,98 +346,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Getting Started
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Getting Started">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#r-programming-fundamentals" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📚 R Programming Fundamentals
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-analysis-with-r" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📊 Data Analysis with R
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-use-this-documentation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How to Use This Documentation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Prerequisites
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quick-links" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quick Links
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -528,7 +411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="r-fundamentals/" class="md-nav__link">
+      <a href="../../r-fundamentals/" class="md-nav__link">
         
   
   
@@ -556,7 +439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="r-fundamentals/getting-started/" class="md-nav__link">
+      <a href="../../r-fundamentals/getting-started/" class="md-nav__link">
         
   
   
@@ -584,7 +467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="r-fundamentals/variables-data-types/" class="md-nav__link">
+      <a href="../../r-fundamentals/variables-data-types/" class="md-nav__link">
         
   
   
@@ -612,7 +495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="r-fundamentals/vectors-operations/" class="md-nav__link">
+      <a href="../../r-fundamentals/vectors-operations/" class="md-nav__link">
         
   
   
@@ -640,7 +523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="r-fundamentals/data-structures/" class="md-nav__link">
+      <a href="../../r-fundamentals/data-structures/" class="md-nav__link">
         
   
   
@@ -668,7 +551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="r-fundamentals/control-flow/" class="md-nav__link">
+      <a href="../../r-fundamentals/control-flow/" class="md-nav__link">
         
   
   
@@ -696,7 +579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="r-fundamentals/functions/" class="md-nav__link">
+      <a href="../../r-fundamentals/functions/" class="md-nav__link">
         
   
   
@@ -724,7 +607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="r-fundamentals/packages/" class="md-nav__link">
+      <a href="../../r-fundamentals/packages/" class="md-nav__link">
         
   
   
@@ -756,28 +639,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -795,7 +681,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -813,7 +699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-analysis-r/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -838,10 +724,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="data-analysis-r/introduction/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction to Data Analysis
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -857,6 +770,220 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-data-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is Data Analysis?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-data-analysis-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Data Analysis Workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-r-for-data-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why R for Data Analysis?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Why R for Data Analysis?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strengths-of-r" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strengths of R
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Use Cases
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#essential-r-packages-for-data-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Essential R Packages for Data Analysis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-your-analysis-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setting Up Your Analysis Environment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting Up Your Analysis Environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#project-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-simple-data-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: Simple Data Analysis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-data-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types of Data Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of Data Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descriptive-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Descriptive Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exploratory-data-analysis-eda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exploratory Data Analysis (EDA)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inferential-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inferential Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predictive-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Predictive Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -869,7 +996,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-analysis-r/data-import-export/" class="md-nav__link">
+      <a href="../data-import-export/" class="md-nav__link">
         
   
   
@@ -897,7 +1024,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-analysis-r/data-cleaning/" class="md-nav__link">
+      <a href="../data-cleaning/" class="md-nav__link">
         
   
   
@@ -925,7 +1052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-analysis-r/exploratory-analysis/" class="md-nav__link">
+      <a href="../exploratory-analysis/" class="md-nav__link">
         
   
   
@@ -953,7 +1080,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-analysis-r/statistical-analysis/" class="md-nav__link">
+      <a href="../statistical-analysis/" class="md-nav__link">
         
   
   
@@ -981,7 +1108,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-analysis-r/visualization/" class="md-nav__link">
+      <a href="../visualization/" class="md-nav__link">
         
   
   
@@ -1009,7 +1136,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-analysis-r/real-datasets/" class="md-nav__link">
+      <a href="../real-datasets/" class="md-nav__link">
         
   
   
@@ -1064,22 +1191,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
+  <a href="#what-is-data-analysis" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Getting Started
+        What is Data Analysis?
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Getting Started">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-data-analysis-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Data Analysis Workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-r-for-data-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why R for Data Analysis?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Why R for Data Analysis?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#r-programming-fundamentals" class="md-nav__link">
+  <a href="#strengths-of-r" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📚 R Programming Fundamentals
+        Strengths of R
       
     </span>
   </a>
@@ -1087,10 +1236,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#data-analysis-with-r" class="md-nav__link">
+  <a href="#common-use-cases" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📊 Data Analysis with R
+        Common Use Cases
       
     </span>
   </a>
@@ -1103,10 +1252,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-use-this-documentation" class="md-nav__link">
+  <a href="#essential-r-packages-for-data-analysis" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How to Use This Documentation
+        Essential R Packages for Data Analysis
       
     </span>
   </a>
@@ -1114,10 +1263,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#setting-up-your-analysis-environment" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prerequisites
+        Setting Up Your Analysis Environment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting Up Your Analysis Environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#project-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-simple-data-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: Simple Data Analysis
       
     </span>
   </a>
@@ -1125,10 +1313,71 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#quick-links" class="md-nav__link">
+  <a href="#types-of-data-analysis" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Quick Links
+        Types of Data Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of Data Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descriptive-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Descriptive Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exploratory-data-analysis-eda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exploratory Data Analysis (EDA)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inferential-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inferential Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predictive-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Predictive Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Steps
       
     </span>
   </a>
@@ -1155,53 +1404,141 @@
   
 
 
-<h1 id="welcome-to-r-science-documentation">Welcome to R Science Documentation</h1>
-<p>Welcome to the comprehensive guide for learning R programming and data analysis! This documentation is designed to take you from beginner to proficient in R programming and data science.</p>
-<h2 id="getting-started">Getting Started</h2>
-<p>This documentation is organized into two main sections:</p>
-<h3 id="r-programming-fundamentals">📚 R Programming Fundamentals</h3>
-<p>Learn the core concepts of R programming, from basic syntax to advanced data structures. This section covers:</p>
-<ul>
-<li>Getting started with R installation and setup</li>
-<li>Understanding variables and data types</li>
-<li>Working with vectors and operations</li>
-<li>Data structures (matrices, lists, data frames)</li>
-<li>Control flow and loops</li>
-<li>Creating and using functions</li>
-<li>Working with R packages</li>
-</ul>
-<p><a href="r-fundamentals/">Start Learning R Fundamentals →</a></p>
-<h3 id="data-analysis-with-r">📊 Data Analysis with R</h3>
-<p>Apply your R skills to real-world data analysis tasks. This section covers:</p>
-<ul>
-<li>Introduction to data analysis workflows</li>
-<li>Importing and exporting data</li>
-<li>Data cleaning and transformation</li>
-<li>Exploratory data analysis</li>
-<li>Statistical analysis techniques</li>
-<li>Data visualization with ggplot2</li>
-<li>Working with real datasets</li>
-</ul>
-<p><a href="data-analysis-r/">Start Learning Data Analysis →</a></p>
-<h2 id="how-to-use-this-documentation">How to Use This Documentation</h2>
+<h1 id="introduction-to-data-analysis">Introduction to Data Analysis</h1>
+<h2 id="what-is-data-analysis">What is Data Analysis?</h2>
+<p>Data analysis is the process of inspecting, cleaning, transforming, and modeling data to discover useful information, draw conclusions, and support decision-making. R is one of the most powerful tools for data analysis, offering extensive capabilities for statistical computing and visualization.</p>
+<h2 id="the-data-analysis-workflow">The Data Analysis Workflow</h2>
+<p>A typical data analysis workflow follows these steps:</p>
 <ol>
-<li><strong>Beginners</strong>: Start with <a href="r-fundamentals/">R Programming Fundamentals</a> and work through each tutorial sequentially</li>
-<li><strong>Experienced Programmers</strong>: You may skip ahead to specific topics, but reviewing fundamentals is recommended</li>
-<li><strong>Data Analysts</strong>: Focus on the <a href="data-analysis-r/">Data Analysis with R</a> section, but ensure you understand R basics first</li>
+<li><strong>Question/Problem Definition</strong>: What are you trying to answer or solve?</li>
+<li><strong>Data Collection</strong>: Gather the necessary data</li>
+<li><strong>Data Import</strong>: Load data into R</li>
+<li><strong>Data Exploration</strong>: Understand the structure and characteristics</li>
+<li><strong>Data Cleaning</strong>: Handle missing values, outliers, inconsistencies</li>
+<li><strong>Data Transformation</strong>: Reshape, aggregate, or create new variables</li>
+<li><strong>Analysis</strong>: Apply statistical methods and models</li>
+<li><strong>Visualization</strong>: Create plots and charts</li>
+<li><strong>Interpretation</strong>: Draw conclusions and insights</li>
+<li><strong>Communication</strong>: Present findings effectively</li>
 </ol>
-<h2 id="prerequisites">Prerequisites</h2>
+<h2 id="why-r-for-data-analysis">Why R for Data Analysis?</h2>
+<h3 id="strengths-of-r">Strengths of R</h3>
 <ul>
-<li>Basic computer literacy</li>
-<li>No prior programming experience required (though it helps)</li>
-<li>R or RStudio installed on your computer (see <a href="r-fundamentals/getting-started/">Getting Started</a>)</li>
+<li><strong>Statistical Power</strong>: Built for statistical analysis</li>
+<li><strong>Rich Ecosystem</strong>: Thousands of packages for specialized tasks</li>
+<li><strong>Reproducibility</strong>: Script-based workflow ensures reproducible research</li>
+<li><strong>Visualization</strong>: Excellent plotting capabilities (ggplot2, base graphics)</li>
+<li><strong>Community</strong>: Large, active community and extensive documentation</li>
+<li><strong>Free and Open Source</strong>: No licensing costs</li>
 </ul>
-<h2 id="quick-links">Quick Links</h2>
+<h3 id="common-use-cases">Common Use Cases</h3>
 <ul>
-<li><a href="r-fundamentals/getting-started/">Installation Guide</a></li>
-<li><a href="r-fundamentals/">R Fundamentals Overview</a></li>
-<li><a href="data-analysis-r/">Data Analysis Overview</a></li>
+<li>Exploratory data analysis</li>
+<li>Statistical modeling and hypothesis testing</li>
+<li>Data visualization and reporting</li>
+<li>Machine learning</li>
+<li>Time series analysis</li>
+<li>Text mining and natural language processing</li>
+<li>Bioinformatics and genomics</li>
 </ul>
-<p>Happy learning!</p>
+<h2 id="essential-r-packages-for-data-analysis">Essential R Packages for Data Analysis</h2>
+<pre><code class="language-r"># Core tidyverse packages
+library(dplyr)      # Data manipulation
+library(tidyr)      # Data tidying
+library(readr)      # Reading data
+library(ggplot2)    # Visualization
+library(stringr)    # String manipulation
+library(lubridate)  # Date/time handling
+
+# Additional useful packages
+library(data.table) # Fast data manipulation
+library(reshape2)   # Data reshaping
+library(corrplot)   # Correlation plots
+library(VIM)        # Missing data visualization
+</code></pre>
+<h2 id="setting-up-your-analysis-environment">Setting Up Your Analysis Environment</h2>
+<h3 id="project-structure">Project Structure</h3>
+<pre><code>my_analysis/
+├── data/
+│   ├── raw/
+│   └── processed/
+├── scripts/
+│   ├── 01_import.R
+│   ├── 02_clean.R
+│   ├── 03_analyze.R
+│   └── 04_visualize.R
+├── output/
+│   ├── figures/
+│   └── tables/
+└── README.md
+</code></pre>
+<h3 id="best-practices">Best Practices</h3>
+<ol>
+<li><strong>Organize your files</strong>: Keep data, scripts, and outputs separate</li>
+<li><strong>Use version control</strong>: Track changes with Git</li>
+<li><strong>Document your code</strong>: Add comments explaining your approach</li>
+<li><strong>Set seed for reproducibility</strong>: <code>set.seed(123)</code> for random operations</li>
+<li><strong>Save intermediate results</strong>: Don't lose your work</li>
+<li><strong>Use R Projects</strong>: Keep everything in one directory</li>
+</ol>
+<h2 id="example-simple-data-analysis">Example: Simple Data Analysis</h2>
+<pre><code class="language-r"># Load required packages
+library(dplyr)
+library(ggplot2)
+
+# Load data (example)
+data(mtcars)
+
+# Quick exploration
+head(mtcars)
+summary(mtcars)
+str(mtcars)
+
+# Basic analysis
+mtcars %&gt;%
+  group_by(cyl) %&gt;%
+  summarize(
+    mean_mpg = mean(mpg),
+    median_mpg = median(mpg),
+    count = n()
+  )
+
+# Simple visualization
+ggplot(mtcars, aes(x = mpg, y = hp)) +
+  geom_point() +
+  geom_smooth(method = &quot;lm&quot;) +
+  labs(
+    title = &quot;Horsepower vs MPG&quot;,
+    x = &quot;Miles per Gallon&quot;,
+    y = &quot;Horsepower&quot;
+  )
+</code></pre>
+<h2 id="types-of-data-analysis">Types of Data Analysis</h2>
+<h3 id="descriptive-analysis">Descriptive Analysis</h3>
+<ul>
+<li>Summarize and describe data</li>
+<li>Calculate means, medians, standard deviations</li>
+<li>Create frequency tables and distributions</li>
+</ul>
+<h3 id="exploratory-data-analysis-eda">Exploratory Data Analysis (EDA)</h3>
+<ul>
+<li>Discover patterns and relationships</li>
+<li>Identify outliers and anomalies</li>
+<li>Generate hypotheses</li>
+</ul>
+<h3 id="inferential-analysis">Inferential Analysis</h3>
+<ul>
+<li>Make predictions and generalizations</li>
+<li>Test hypotheses</li>
+<li>Estimate population parameters</li>
+</ul>
+<h3 id="predictive-analysis">Predictive Analysis</h3>
+<ul>
+<li>Build models to forecast future outcomes</li>
+<li>Machine learning and statistical modeling</li>
+</ul>
+<h2 id="next-steps">Next Steps</h2>
+<p>Learn about <a href="../data-import-export/">Data Import and Export</a> to bring your data into R.</p>
 
 
 
@@ -1257,10 +1594,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
