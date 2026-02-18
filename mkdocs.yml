@@ -1,0 +1,54 @@
+site_name: R Science Documentation
+
+# GitHub Pages configuration
+site_url: https://dataidea-science.github.io/dataidea-R/
+repo_url: https://github.com/dataidea-science/dataidea-R
+repo_name: dataidea-science/dataidea-R
+
+# Theme configuration
+theme:
+  name: material
+  palette:
+    # Light mode
+    - scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.annotate
+
+nav:
+  - Home: index.md
+  - R Programming Fundamentals:
+    - R Fundamentals Overview: r-fundamentals/index.md
+    - Getting Started with R: r-fundamentals/getting-started.md
+    - Variables and Data Types: r-fundamentals/variables-data-types.md
+    - Vectors and Basic Operations: r-fundamentals/vectors-operations.md
+    - Data Structures: r-fundamentals/data-structures.md
+    - Control Flow: r-fundamentals/control-flow.md
+    - Functions: r-fundamentals/functions.md
+    - Working with Packages: r-fundamentals/packages.md
+  - Data Analysis with R:
+    - Data Analysis Overview: data-analysis-r/index.md
+    - Introduction to Data Analysis: data-analysis-r/introduction.md
+    - Data Import and Export: data-analysis-r/data-import-export.md
+    - Data Cleaning and Transformation: data-analysis-r/data-cleaning.md
+    - Exploratory Data Analysis: data-analysis-r/exploratory-analysis.md
+    - Statistical Analysis: data-analysis-r/statistical-analysis.md
+    - Data Visualization: data-analysis-r/visualization.md
+    - Working with Real Datasets: data-analysis-r/real-datasets.md
