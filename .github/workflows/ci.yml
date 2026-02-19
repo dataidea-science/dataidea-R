@@ -33,9 +33,10 @@ jobs:
       - name: Build site
         run: mkdocs build
 
-      - name: Copy CNAME to site directory
+      - name: Prepare deployment
         if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main'
         run: |
+          touch site/.nojekyll
           if [ -f CNAME ]; then
             cp CNAME site/CNAME
           fi
