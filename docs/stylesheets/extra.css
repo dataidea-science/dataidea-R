@@ -1,0 +1,74 @@
+/*
+ * R Science – Shades of Gray palette
+ * From: #BEBEBE, #888888, #696969, #404040, #000000
+ */
+
+/* Light mode (default) – primary & accent */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #696969;
+  --md-primary-fg-color--light: #888888;
+  --md-primary-fg-color--dark: #404040;
+  --md-primary-bg-color: #fff;
+  --md-primary-bg-color--light: rgba(255, 255, 255, 0.7);
+  --md-accent-fg-color: #404040;
+  --md-accent-fg-color--transparent: rgba(64, 64, 64, 0.1);
+  --md-accent-bg-color: #fff;
+  --md-accent-bg-color--light: rgba(255, 255, 255, 0.7);
+  --md-typeset-a-color: #404040;
+  --md-default-fg-color: #404040;
+  --md-default-fg-color--light: #696969;
+  --md-default-fg-color--lighter: #888888;
+  --md-default-bg-color: #fff;
+  --md-code-bg-color: #f5f5f5;
+  --md-code-fg-color: #404040;
+}
+
+/* Dark mode (slate) – primary & accent */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #404040;
+  --md-primary-fg-color--light: #696969;
+  --md-primary-fg-color--dark: #000000;
+  --md-primary-bg-color: #BEBEBE;
+  --md-primary-bg-color--light: rgba(190, 190, 190, 0.7);
+  --md-accent-fg-color: #BEBEBE;
+  --md-accent-fg-color--transparent: rgba(190, 190, 190, 0.1);
+  --md-accent-bg-color: #404040;
+  --md-accent-bg-color--light: rgba(64, 64, 64, 0.7);
+  --md-typeset-a-color: #BEBEBE;
+  --md-default-fg-color: rgba(190, 190, 190, 0.87);
+  --md-default-fg-color--light: rgba(190, 190, 190, 0.54);
+  --md-default-fg-color--lighter: rgba(190, 190, 190, 0.32);
+  --md-default-bg-color: #121212;
+  --md-default-bg-color--light: #1e1e1e;
+  --md-code-bg-color: #262626;
+  --md-code-fg-color: #BEBEBE;
+  --md-footer-bg-color: #0d0d0d;
+  --md-footer-bg-color--dark: #000000;
+}
+
+/* Header and tabs use primary; ensure contrast */
+.md-header {
+  background-color: var(--md-primary-fg-color);
+}
+
+[data-md-color-primary="grey"] .md-header,
+[data-md-color-scheme="slate"] .md-header {
+  background-color: var(--md-primary-fg-color);
+}
+
+.md-tabs {
+  background-color: var(--md-primary-fg-color);
+}
+
+/* Links and buttons stay within palette */
+.md-typeset a {
+  color: var(--md-typeset-a-color);
+}
+
+.md-typeset a:hover {
+  color: var(--md-primary-fg-color--dark);
+}
+
+[data-md-color-scheme="slate"] .md-typeset a:hover {
+  color: #fff;
+}

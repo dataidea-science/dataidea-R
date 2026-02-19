@@ -35,6 +35,7 @@ When using a custom domain with GitHub Pages, the `site_url` in `mkdocs.yml` mus
 
 4. **Check GitHub Pages settings:**
    - Go to Settings → Pages
+   - Set **Source** to **Deploy from a branch** (not "GitHub Actions"), branch **gh-pages**, folder **/ (root)**
    - Verify "Custom domain" shows `r.dataidea.org`
    - Ensure "Enforce HTTPS" is enabled (after DNS propagates)
 

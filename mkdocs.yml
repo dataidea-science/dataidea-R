@@ -8,21 +8,25 @@ repo_name: dataidea-science/dataidea-R
 # Use directory URLs (default, but explicit for clarity)
 use_directory_urls: true
 
+# Extra CSS for Shades of Gray palette (#BEBEBE, #888888, #696969, #404040, #000000)
+extra_css:
+  - stylesheets/extra.css
+
 # Theme configuration
 theme:
   name: material
   palette:
-    # Light mode
+    # Light mode – base grey; exact palette in docs/stylesheets/extra.css
     - scheme: default
-      primary: blue
-      accent: blue
+      primary: grey
+      accent: grey
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     # Dark mode
     - scheme: slate
-      primary: blue
-      accent: blue
+      primary: grey
+      accent: grey
       toggle:
         icon: material/brightness-4
         name: Switch to light mode

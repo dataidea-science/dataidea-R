@@ -33,6 +33,11 @@ jobs:
       - name: Build site
         run: mkdocs build
 
+      - name: Verify build output
+        run: |
+          test -f site/index.html || (echo "Build failed: site/index.html not found" && exit 1)
+          echo "Build output verified (index.html and assets present)"
+
       - name: Prepare deployment
         if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main'
         run: |
